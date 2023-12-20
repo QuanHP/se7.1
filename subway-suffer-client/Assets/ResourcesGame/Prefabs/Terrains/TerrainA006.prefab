@@ -15948,7 +15948,7 @@ MonoBehaviour:
   typeFalling: 1
   isWallLeft: 0
   isWallRight: 0
-  neverDestroy: 0
+  neverDestroy: 1
   parentBarrier: {fileID: 1899431957703946}
 --- !u!1 &1364123560133234
 GameObject:

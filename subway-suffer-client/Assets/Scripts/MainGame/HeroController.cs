@@ -1104,9 +1104,10 @@ public class HeroController : MonoBehaviour {
         if (typeCollider == TypeCollider.bottom) { 
             checkEnterExitCol = tempCol; /*if (barrier != null) print("bottom");*/ 
                if (barrier != null && myCollider.transform.position.y < 8.5f){  
-                if (collision.transform.position.z < transform.position.z || (barrier != null && barrier.typeBarrier == TypeBarrier.neverFall && Mathf.Abs(collision.transform.position.x - oldPointBefore.x) < 1.5f)){                   
+                if (collision.transform.position.z < transform.position.z || (barrier != null && barrier.typeBarrier == TypeBarrier.neverFall || Mathf.Abs(collision.transform.position.x - oldPointBefore.x) < 1.5f)){                   
                         transform.GetComponent<Rigidbody>().isKinematic = true;
-                        transform.Translate(Vector3.up * 0.1f * ( 0.1f /(Mathf.Tan(29f * Mathf.PI / 180f) * TerrainController.speed)) + Vector3.up * Modules.speedGame* 7f/30f);
+                        transform.Translate(Vector3.up * 0.1f * ( 0.1f /(Mathf.Tan(27f * Mathf.PI / 180f) * TerrainController.speed)) + Vector3.up * Modules.speedGame* 7f/30f);
+                        //transform.GetComponent<Rigidbody>().MovePosition(transform.position + Vector3.up * 0.1f * ( 0.1f /(Mathf.Tan(29f * Mathf.PI / 180f) * TerrainController.speed)) + Vector3.up * Modules.speedGame* 7f/30f);
                         transform.GetComponent<Rigidbody>().isKinematic = false;
                         // Modules.totalKey ++;
                 }    
