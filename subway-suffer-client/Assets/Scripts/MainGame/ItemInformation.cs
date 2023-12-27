@@ -157,5 +157,6 @@ public enum TypeItems
     roadBonus,
     boxBonus,
     startTunner,
-    endTunner
+    endTunner,
+    Tunner
 }
