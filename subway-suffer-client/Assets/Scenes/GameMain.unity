@@ -10284,8 +10284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexScenesNow: 0
-  listIndexScenesNormal: 0000000001000000
-  listIndexScenesBonus: 0200000003000000
+  listIndexScenesNormal: 000000000100000002000000
+  listIndexScenesBonus: 0300000004000000
   maxShowTerrainFront: 2
   maxShowTerrainBack: 2
   listShowTerrain: []
