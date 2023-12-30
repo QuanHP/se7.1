@@ -144,9 +144,27 @@ public class TerrainController : MonoBehaviour
         else indexScenesNow = indexScene;
         if (indexScenesNow < 0)
         {
-            int newMap = oldIndexScene;
-            while (newMap == oldIndexScene)
-                newMap = listIndexScenesNormal[Random.Range(0, listIndexScenesNormal.Count)];
+            int newMap = oldIndexScene; 
+            string name = poolTerrains.listSceneTerrain[oldIndexScene].listTerrain[runCodeTerrain];
+            // while (newMap == oldIndexScene)
+            //     newMap = listIndexScenesNormal[Random.Range(0, listIndexScenesNormal.Count)];
+            if (name.StartsWith("A"))
+            {
+                newMap = listIndexScenesNormal[0];
+            }
+            else if (name.StartsWith("D"))
+            {
+                newMap = listIndexScenesNormal[0];
+            }
+            else if (name.StartsWith("B"))
+            {
+                newMap = listIndexScenesNormal[1];
+            }
+            else if (name.StartsWith("C"))
+            {
+                newMap = listIndexScenesNormal[2];
+            }
+            else newMap = listIndexScenesNormal[Random.Range(0, listIndexScenesNormal.Count)];
             indexScenesNow = newMap;
         }
         pointCodeTerrain = 0;
