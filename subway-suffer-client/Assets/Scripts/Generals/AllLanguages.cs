@@ -545,7 +545,7 @@ public class AllLanguages : MonoBehaviour {
     };
     public static List<string> menuRate = new List<string>() 
     { 
-        "REVIEW", 
+        "SAVE YOUR SCORE", 
         "ОЦЕНКА",
         "RÉVISER", 
         "MEINUNGEN", 
@@ -555,11 +555,11 @@ public class AllLanguages : MonoBehaviour {
         "レビュー", 
         "리뷰", 
         "回顾",
-        "XẾP HẠNG" 
+        "SAVE YOUR SCORE" 
     };
     public static List<string> menuButtonRate = new List<string>() 
     { 
-        "RATE", 
+        "LOGIN", 
         "ОЦЕНИТЬ", 
         "RÉVISER", 
         "MEINUNGEN", 
@@ -569,11 +569,11 @@ public class AllLanguages : MonoBehaviour {
         "レビュー", 
         "리뷰",
         "回顾", 
-        "XẾP HẠNG" 
+        "LOGIN" 
     };
     public static List<string> menuNoteRate = new List<string>() 
     {
-        "<color=green>Rate</color> and review.",
+        "",
         "<color=green>Оценить</color> игру.", 
         "Aidez-nous à <color=green>améliorer</color> le jeu.", 
         "Helfen uns, das spiel zu <color=green>verbessern</color>.", 
@@ -583,7 +583,7 @@ public class AllLanguages : MonoBehaviour {
         "ゲームの <color=green>改善にご</color> 協力ください。",
         "우리가 게임을 <color=green>개선</color> 할 수 있도록 도와주세요.", 
         "帮助我们 <color=green>改进</color> 游戏。", 
-        "<color=green>Đánh giá</color> và xếp hạng trò chơi." 
+        "" 
     };
     public static List<string> menuNoteHoverboard = new List<string>() 
     { 
