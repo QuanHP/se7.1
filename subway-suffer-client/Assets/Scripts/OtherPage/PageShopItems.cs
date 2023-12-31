@@ -78,7 +78,8 @@ public class PageShopItems : MonoBehaviour {
 
     //xu ly ngon ngu
     public Text textBuyItemA, textBuyItemB, textUpgradeA, textUpgradeB;
-    public Text textBuyCoins, textBuyKeys, textSingleUse;
+    //public Text textBuyCoins, textBuyKeys, textSingleUse;
+    public Text textSingleUse;
     public Text textPlay;
     public List<Text> textBuy;
     public Text textHoverboard, textHoverboardNote, textChestBox, textChestBoxNote, textHeadStart, textHeadStartNote, textScoreBooster, textScoreBoosterNote;
@@ -96,18 +97,18 @@ public class PageShopItems : MonoBehaviour {
         textUpgradeA.text = AllLanguages.shopUpgrades[iLang];
         textUpgradeB.font = AllLanguages.listFontLangA[iLang];
         textUpgradeB.text = AllLanguages.shopUpgrades[iLang];
-        textBuyCoins.font = AllLanguages.listFontLangA[iLang];
-        textBuyCoins.text = AllLanguages.shopBuyCoin[iLang];
-        textBuyKeys.font = AllLanguages.listFontLangA[iLang];
-        textBuyKeys.text = AllLanguages.shopBuyKey[iLang];
+        // textBuyCoins.font = AllLanguages.listFontLangA[iLang];
+        // textBuyCoins.text = AllLanguages.shopBuyCoin[iLang];
+        // textBuyKeys.font = AllLanguages.listFontLangA[iLang];
+        // textBuyKeys.text = AllLanguages.shopBuyKey[iLang];
         textSingleUse.font = AllLanguages.listFontLangA[iLang];
         textSingleUse.text = AllLanguages.shopSingleUse[iLang];
         textPlay.font = AllLanguages.listFontLangA[iLang];
         textPlay.text = AllLanguages.menuPlay[iLang];
-        foreach (Text txt in textBuy) {
-            txt.font = AllLanguages.listFontLangA[iLang];
-            txt.text = AllLanguages.shopButtonBuy[iLang]; 
-        }
+        // foreach (Text txt in textBuy) {
+        //     txt.font = AllLanguages.listFontLangA[iLang];
+        //     txt.text = AllLanguages.shopButtonBuy[iLang]; 
+        // }
         textHoverboard.font = AllLanguages.listFontLangA[iLang];
         textHoverboard.text = AllLanguages.shopHoverboard[iLang];
         textHoverboardNote.font = AllLanguages.listFontLangB[iLang];
