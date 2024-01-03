@@ -124,4 +124,5 @@ Bấm nút Play của Unity để chạy thử
 ## 3.4. Build và chạy trên Android
 
 Vào menu File -> Build Settings, chọn Platform là Android rồi nhấn "Switch Platform" để chuyển sang Android. Sau đó nhấn vào nút Build để thực hiện build ra file APK. Tham khảo trên Google search để biết cách cài đặt Build settings sao cho phù hợp
+https://drive.google.com/drive/folders/1NTbMPBLsHxx9kGlNUrO_NKkJHbEcIMUr?usp=sharing
 
