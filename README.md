@@ -12,7 +12,7 @@ Mô tả cô đọng trong 5-10 dòng
 Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
 
 ## 1.2. Các usecase trong game
-- Lối chơi:
+### - Lối chơi:
 + Di chuyển sang trái, phải, lên, xuống tránh các vật cản để đạt thành tích chạy cao nhất có thể.  
 + Bên cạnh đó, trên đường chạy người chơi có thể thu thập và tích lũy các vật phẩm để giúp quá trình chạy dễ dàng.  
 - Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay, nâng cấp đồ,..   
