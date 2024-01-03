@@ -27,7 +27,8 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 - Rương bí ẩn: Mở ra các vật phẩm như vàng, ván trượt, chìa khóa,..
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/cb888a10-d39a-4d56-908e-49bca41eb848)
 - Chìa khóa: Giúp hồi sinh trong trận  
-![image](https://github.com/QuanHP/se7.1/assets/148623697/dbc7ceb4-9673-430d-8c48-4a8ac5f741b6)
+![image](https://github.com/QuanHP/se7.1/assets/148623697/9ecd2077-338c-4a08-8d5c-86205c7c14df)
+
 - Lò xo: Giúp bật nhảy lên cao
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/bc7e23ec-8bcc-4e6c-a4b7-aa4510208f34)
 
