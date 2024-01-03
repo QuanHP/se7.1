@@ -22,10 +22,14 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/6426e6ab-fa91-40e1-be18-036f26912748)
 - Giày nhảy cao: Giúp nhảy cao hơn bình thường để dễ dàng vượt địa hình
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/7e3ede39-6ae9-405c-8bc1-fde850d7f5b7)
-- Biểu tượng Pharaon: Khi chạm vào biểu tượng này, người chơi sẽ được chuyển đến map trên trời
+- Biểu tượng Pharaon: Khi chạm vào biểu tượng này, người chơi sẽ được chuyển đến map trên trời  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/3aba62a3-6134-4bd8-9e20-374b86458c7a)
-
-
+- Rương bí ẩn: Mở ra các vật phẩm như vàng, ván trượt, chìa khóa,..
+![image](https://github.com/QuanHP/se7.1/assets/148623697/cb888a10-d39a-4d56-908e-49bca41eb848)
+- Chìa khóa: Giúp hồi sinh trong trận  
+![image](https://github.com/QuanHP/se7.1/assets/148623697/dbc7ceb4-9673-430d-8c48-4a8ac5f741b6)
+- Lò xo: Giúp bật nhảy lên cao
+![image](https://github.com/QuanHP/se7.1/assets/148623697/bc7e23ec-8bcc-4e6c-a4b7-aa4510208f34)
 
 
 # 2. Các sửa đổi cho game
