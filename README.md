@@ -12,10 +12,10 @@ Mô tả cô đọng trong 5-10 dòng
 Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
 
 ## 1.2. Các usecase trong game
-- Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay,...
+- Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay,...  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/9b503683-f93f-4baa-b133-eea57d0899c7)
 - Nam châm: Dùng để hút vàng xung quanh người chơi  
-![image](https://github.com/QuanHP/se7.1/assets/148623697/dc8f8ae9-cbc1-47bb-8343-47b8828537af)
+![image](https://github.com/QuanHP/se7.1/assets/148623697/0328a08a-57b3-4d1e-9b2b-5268a2fadb08)
 - Ván trượt: Ấn 2 lần vào màn hình để triệu hồi ván trượt. Ván trượt giúp người chơi di chuyển nhanh hơn, nếu người chơi va chạm với vật thể trên đường thì ván trượt tự phát nổ và người chơi sẽ được cứu.
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/74eae87c-7c45-4082-a00f-5916a5c870fd)
 - Bóng bay: Đùng để chuyển giữa các map
