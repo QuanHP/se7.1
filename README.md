@@ -46,8 +46,15 @@ Game có hai chế độ:
 - Mua các vật phẩm như ván bay, rương bí ẩn, xe bay, điểm cộng  
 #### - Nâng cấp  
 - Nâng cấp các vật phẩm để tăng thời gian duy trì: thiết bị bay, giày nhảy cao, nam châm, nhân đôi điểm, xe máy bay, ván bay  
-### 1.2.3 Màn chọn nhân vật
-- 
+### 1.2.3 Màn chọn nhân vật  
+#### - Nhân vật  
+- Hiển thị danh sách các nhân vật của trò chơi  
+- Hiển thị các thông tin cơ bản của nhân vật  
+- Cho phép người chơi dùng vàng để mua nhân vật và có thể tùy chọn, đổi nhân vật  
+#### - Ván bay  
+- Hiển thị danh sách các ván bay  
+- Hiển thị các thông tin cơ bản của ván bay  
+- Cho phép người chơi dùng vàng để mua ván bay và tùy ý chọn, đổi ván bay  
 ### 1.2.4 Màn hình bảng xếp hạng:  
 - Hiển thị điểm của người chơi  
 - Hiển thị mục các bạn bè của người chơi, xếp hạng các bạn bè theo thứ tự giảm dần về điểm chạy  
