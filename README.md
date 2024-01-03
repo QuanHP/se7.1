@@ -20,13 +20,13 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/0328a08a-57b3-4d1e-9b2b-5268a2fadb08)
 - Ván bay: Ấn 2 lần vào màn hình để triệu hồi ván bay. Ván bay giúp người chơi di chuyển nhanh hơn, nếu người chơi va chạm với vật thể trên đường thì ván bay tự phát nổ và người chơi sẽ được cứu.  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/a31d0006-b2c2-46b7-9a03-35e9b94e89fa)
-- Xe máy bay:
+- Xe máy bay:  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/15aa7494-b6bb-491f-8493-ebd927aed884)
-- Thiết bị bay:
+- Thiết bị bay:  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/e93b2f15-b9f1-428b-a27b-04ec0b7728ec)
 - Giày nhảy cao: Giúp nhảy cao hơn bình thường để dễ dàng vượt địa hình  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/7b7cd5b3-98b6-46aa-b3fc-b520a886a474)
-- Nhân đôi điểm: Giúp người chơi nhân đôi điểm chạy
+- Nhân đôi điểm: Giúp người chơi nhân đôi điểm chạy  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/3b326a28-a941-48e9-98ac-aef8f595ac87)
 - Rương bí ẩn: Mở ra các vật phẩm như vàng, ván trượt, chìa khóa,..  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/57108974-a794-4193-9d07-89f1d6ab1b29)
