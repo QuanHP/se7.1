@@ -17,6 +17,12 @@ Các usecase chính, nhân vật có thể chơi như nào. Cần có hình ản
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
 ## 2.1. Thay đổi 1
+Thay thế map City thành map Citywinter
+Cách làm:
+Bước 1: Lấy các texture liên quan đến tuyết để phủ lên bề mặt các vật trong map theo trục Z.
+Bước 2: Chọn "Material" -> tạo một texture mới -> import ảnh tuyết đã tải về từ trước để làm texture phủ lên từng object. Sau đó, chuyển từ "Object Mode" sang "Edit Mode".
+Bước 3: Ở Edit Mode, có 3 lựa chọn là Vertex select, Edge select và Face select. Chọn Face select và tiến hành phủ tuyết bằng texture.
+Chọn từng mặt của object muốn phủ, sau đó chọn texture tuyết vừa import vào -> chọn "Assign" để phủ texture lên từng object.
 ## 2.2. Thay đổi 2
 
 # 3. Hướng dẫn Khởi tạo dự án
