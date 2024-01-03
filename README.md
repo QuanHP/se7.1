@@ -12,7 +12,9 @@ Mô tả cô đọng trong 5-10 dòng
 Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
 
 ## 1.2. Các usecase trong game
-Các usecase chính, nhân vật có thể chơi như nào. Cần có hình ảnh đi kèm..
+- Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay,...
+![image](https://github.com/QuanHP/se7.1/assets/148623697/1e89d282-d9ec-4699-8e80-6671d9f9f493)
+
 
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
