@@ -13,7 +13,7 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 
 ## 1.2. Các usecase trong game
 - Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay,...
-![CoinPharaoh](https://github.com/QuanHP/se7.1/assets/148623697/216af76b-610d-4730-bbec-3fad82d793ba)
+![image](https://github.com/QuanHP/se7.1/assets/148623697/9b503683-f93f-4baa-b133-eea57d0899c7)
 - Nam châm: Dùng để hút vàng xung quanh người chơi  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/dc8f8ae9-cbc1-47bb-8343-47b8828537af)
 - Ván trượt: Ấn 2 lần vào màn hình để triệu hồi ván trượt. Ván trượt giúp người chơi di chuyển nhanh hơn, nếu người chơi va chạm với vật thể trên đường thì ván trượt tự phát nổ và người chơi sẽ được cứu.
