@@ -69,7 +69,7 @@ public class ButtonItemBuy : MonoBehaviour {
         {
             if (tran.GetComponent<ButtonItemBuy>().codeItem != codeItem)
             {
-                tran.GetComponent<Rigidbody2D>().AddForce(new Vector3(1, -7000, 1));
+                //tran.GetComponent<Rigidbody2D>().AddForce(new Vector3(1, -7000, 1));
             }
         }
     }
