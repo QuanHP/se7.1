@@ -24,14 +24,12 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/7b7cd5b3-98b6-46aa-b3fc-b520a886a474)
 - Biểu tượng Pharaon: Khi chạm vào biểu tượng này, người chơi sẽ được chuyển đến map trên trời  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/1e0f2522-b3f4-4aed-874b-6af4fc961b54)
-- Rương bí ẩn: Mở ra các vật phẩm như vàng, ván trượt, chìa khóa,..
-![image](https://github.com/QuanHP/se7.1/assets/148623697/cb888a10-d39a-4d56-908e-49bca41eb848)
+- Rương bí ẩn: Mở ra các vật phẩm như vàng, ván trượt, chìa khóa,..  
+![image](https://github.com/QuanHP/se7.1/assets/148623697/57108974-a794-4193-9d07-89f1d6ab1b29)
 - Chìa khóa: Giúp hồi sinh trong trận  
-![image](https://github.com/QuanHP/se7.1/assets/148623697/9ecd2077-338c-4a08-8d5c-86205c7c14df)
-- Lò xo: Giúp bật nhảy lên cao
-![image](https://github.com/QuanHP/se7.1/assets/148623697/16d1bd9b-4d5e-4eff-9b3e-b4eeedefae35)
-
-
+![image](https://github.com/QuanHP/se7.1/assets/148623697/67061ce9-3f73-4968-81be-4681cc943117)
+- Lò xo: Giúp bật nhảy lên cao  
+![image](https://github.com/QuanHP/se7.1/assets/148623697/297c37ca-e01f-4b48-b88d-5c51eacd5053)  
 
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
