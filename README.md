@@ -52,10 +52,22 @@ Chọn từng mặt của object muốn phủ, sau đó chọn texture tuyết v
 ## 3.1. Cài Unity bản từ 2022 trở đi
 Đăng ký tài khoản Unity bằng account sinh viên để có thể tham gia chương trình Education License của Unity
 
-## 3.2. Mở dự án trên Unity và chạy thử ngay trên Màn hình Unity Editor
+## 3.2. Cấu hình để sử dụng được firebase và facebook login
+Cách cấu hình để đăng nhập bằng firebase:
+-	Vào trang https://console.firebase.google.com/ và tạo một project
+-	Tạo một realtime database. Chỉnh setting rules thành true.
+-	Vào project settings và tải xuống google-service.json và firebase SDK về và cài  các package cần thiết như (FirebaseAuth,FirebaseDatabase,,..).
+-	đặt file google-service.json vào assets. 
+-	Giải nén file firebase SDK. Sau đó vào Assets và chọn import package > Custom package > .unitypackage file
+Cách cấu hình để đăng nhập bằng facebook:
+-	Truy cập vào trang https://developers.facebook.com/docs/unity/ vài tải xuống facebook sdk.
+-	Truy cập vào https://developers.facebook.com/ và tạo app.
+-	Setting và đăng app. (khi đăng app cần xác nhận doanh nghiệp, app bọn em k vượt qua được bước này nên khi đăng nhập bằng facebook bị lỗi).
+
+## 3.3. Mở dự án trên Unity và chạy thử ngay trên Màn hình Unity Editor
 Vào menu File-> Open Scene, chọn vào file Assets/Scene/LoadData.unity
 Bấm nút Play của Unity để chạy thử
 
-## 3.3. Build và chạy trên Android
+## 3.4. Build và chạy trên Android
 
 Vào menu File -> Build Settings, chọn Platform là Android rồi nhấn "Switch Platform" để chuyển sang Android. Sau đó nhấn vào nút Build để thực hiện build ra file APK. Tham khảo trên Google search để biết cách cài đặt Build settings sao cho phù hợp
