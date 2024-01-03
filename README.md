@@ -45,7 +45,7 @@ Game có hai chế độ:
 #### - Mua vật phẩm  
 - Mua các vật phẩm như ván bay, rương bí ẩn, xe bay, điểm cộng  
 #### - Nâng cấp  
-- Nâng cấp các vật phẩm để tăng thời gian duy trì: thiết bị bay, giày nhảy cao, nam châm, nhân đôi điểm, xe máy bay, ván bay
+- Nâng cấp các vật phẩm để tăng thời gian duy trì: thiết bị bay, giày nhảy cao, nam châm, nhân đôi điểm, xe máy bay, ván bay  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/3a127af8-6dfa-4a44-84d2-20c616fb2bee)  
 ### 1.2.3 Màn chọn nhân vật  
 #### - Nhân vật  
@@ -55,7 +55,7 @@ Game có hai chế độ:
 #### - Ván bay  
 - Hiển thị danh sách các ván bay  
 - Hiển thị các thông tin cơ bản của ván bay  
-- Cho phép người chơi dùng vàng để mua ván bay và tùy ý chọn, đổi ván bay
+- Cho phép người chơi dùng vàng để mua ván bay và tùy ý chọn, đổi ván bay  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/0663821d-fe92-48b6-89d2-c1231d783cc0)  
 ### 1.2.4 Màn hình bảng xếp hạng:  
 - Hiển thị điểm của người chơi  
@@ -88,7 +88,7 @@ __Ẩn một số chức năng lỗi hoặc chưa hoàn thiện__
 ## 2.4. Thay đổi 4
 __Thêm login bằng usename và password__
 - Thêm tính năng login bằng tài khoản và mật khẩu kết nối với firebase
-- Thêm tính năng login bằng facebook nhưng chưa lấy được mã doanh nghiệp
+- Thêm tính năng login bằng facebook nhưng chưa lấy được mã doanh nghiệp  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/c74ac6c9-17a6-4346-a892-3a10ed3099a3)
 
 ## 2.4. Thay đổi 5
