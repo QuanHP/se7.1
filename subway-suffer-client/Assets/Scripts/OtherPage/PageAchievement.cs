@@ -2,6 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Facebook.Unity;
+using Firebase.Database;
+using System.Threading.Tasks;
 
 public class PageAchievement : MonoBehaviour
 {
@@ -19,11 +22,12 @@ public class PageAchievement : MonoBehaviour
     public Vector3 pointListCountry = Vector3.zero;
     public Vector3 pointListWorld = Vector3.zero;
     public Vector3 pointListMultiplayer = Vector3.zero;
-    //private FacebookController fbController;
+    private FacebookController fbController;
     private GameObject panelTopCountry;//list hien thi xep hang dat nuoc
     private GameObject panelTopWorld;//list hien thi xep hang the gioi
     private GameObject panelTopMultiplayer;//list hien thi xep hang Multiplayer
     private GameObject mainCharacter;
+
 
 	public void CallStart () {
         ChangeAllLanguage();
@@ -87,12 +91,12 @@ public class PageAchievement : MonoBehaviour
             panelLoadingD.transform.GetComponent<TextLoading>().CallStart();
         }
         else panelLoadingD.SetActive(false);
-#if !(UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_IOS || UNITY_ANDROID || UNITY_EDITOR)
+ //if(!(UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_IOS || UNITY_ANDROID || UNITY_EDITOR))
         ButtonTopCountryClick();
         panelFBLogin.SetActive(true);
-#else
+
         //xu ly xep hang facebook
-        /*
+        
         if (fbController == null) fbController = Modules.facebookController.GetComponent<FacebookController>();
 		fbController.isPostDone = false;
 		fbController.isGetDone = false;
@@ -113,12 +117,13 @@ public class PageAchievement : MonoBehaviour
         Invoke("PostScoreFacebook", 0f);
         Invoke("GetScoreFacebook", 0f);
         InvokeRepeating("GetBoardScoreFacebook", 0f, 1f);
-        */
-#endif
+        
+
         //xu ly xep hang quoc gia va the gioi
         if (Modules.containAchievement.activeSelf) StartCoroutine(PostScore());
         Invoke("PostScoreWorld", 0f);
 	}
+    
 
     void OnDisable()
     {
@@ -172,7 +177,7 @@ public class PageAchievement : MonoBehaviour
         Invoke("BlinkDoubleCoin", 0.5f);
     }
 
-    /*
+    
 
     void PostScoreFacebook()
     {
@@ -207,7 +212,7 @@ public class PageAchievement : MonoBehaviour
         panelLoadingA.SetActive(false);
         fbController.isGetDone = false;
     }
-    */
+    
     void PostScoreWorld()
     {
         if (statusPost)
@@ -215,7 +220,7 @@ public class PageAchievement : MonoBehaviour
             if (Modules.containAchievement.activeSelf)
             {
                 StartCoroutine(GetScoreCountry());
-                StartCoroutine(GetDataMultiplayer());
+                //StartCoroutine(GetDataMultiplayer());
             }
         }
         else Invoke("PostScoreWorld", 1f);
@@ -294,6 +299,7 @@ public class PageAchievement : MonoBehaviour
         if (idDevice == "Null")
         {
             statusPost = true;
+            Debug.Log("Status post 1" + statusPost);
             yield break;
         }
         //string nameDevice = SystemInfo.deviceName;
@@ -320,6 +326,8 @@ public class PageAchievement : MonoBehaviour
         if (_resuilt.text == "Done")
         { //hoan thanh
             statusPost = true;
+            Debug.Log("Status post 2" + statusPost);
+
             Modules.winNow = 0;
             Modules.loseNow = 0;
             Modules.failNow = 0;
@@ -460,77 +468,160 @@ public class PageAchievement : MonoBehaviour
         yield break;
     }
 
-    IEnumerator GetDataMultiplayer()
+    /* IEnumerator GetDataMultiplayer()
+     {
+         WWWForm form = new WWWForm();
+         form.AddField("table", "useBusSubway");
+         form.AddField("limit", "30");
+         WWW _resuilt = new WWW(Modules.linkGetDataMultiplayer, form);
+         float runTime = 0f;
+         while (!_resuilt.isDone && runTime < Modules.maxTime)
+         {
+             runTime += Modules.requestTime;
+             yield return new WaitForSeconds(Modules.requestTime);
+         }
+         yield return _resuilt;
+         if (_resuilt.text != "null" && _resuilt.text != "")
+         { //hoan thanh
+             //print(_resuilt.text);
+             listAvatarMultiPlayer = new List<Texture2D>();
+             string[] dataLine = _resuilt.text.Split('\n');
+             if (panelTopMultiplayer != null) Destroy(panelTopMultiplayer);
+             panelTopMultiplayer = Instantiate(listTempMultiplayer, Vector3.zero, Quaternion.identity) as GameObject;
+             Transform panelContent = panelTopMultiplayer.transform.Find("Content");
+             Transform panelItem = panelContent.transform.Find("Item");
+             for (int i = 0; i < dataLine.Length; i++)
+             {
+                 if (dataLine[i] == "") continue;
+                 GameObject newItem = panelItem.gameObject;
+                 if (i > 0)
+                 {
+                     newItem = Instantiate(panelItem.gameObject, Vector3.zero, Quaternion.identity) as GameObject;
+                     newItem.transform.SetParent(panelContent, false);
+                 }
+                 if (i % 2 != 0) newItem.GetComponent<Image>().color = Modules.colorListLine;
+                 Transform tranAvatar = newItem.transform.Find("Avatar");
+                 Transform tranName = newItem.transform.Find("Name");
+                 Transform tranScore = newItem.transform.Find("Score");
+                 Transform tranIndex = newItem.transform.Find("Index");
+
+                 Image fbAvatar = tranAvatar.GetComponent<Image>();
+                 Text fbName = tranName.GetComponent<Text>();
+                 Text fbScore = tranScore.GetComponent<Text>();
+                 Text fbIndex = tranIndex.GetComponent<Text>();
+
+                 string[] data = dataLine[i].Split(';');
+                 fbName.text = data[0];
+                 listAvatarMultiPlayer.Add(null);
+                 if (Modules.containAchievement.activeSelf) StartCoroutine(LoadImageMultiplayer(data[1], i, fbAvatar));
+                 fbScore.text = data[2];
+                 fbIndex.text = (i + 1).ToString();
+             }
+             panelTopMultiplayer.transform.position = pointListMultiplayer;
+             panelTopMultiplayer.transform.SetParent(parentListMultiplayer.transform, false);
+             panelLoadingD.SetActive(false);
+             //statusGet = true;
+         }
+         else
+         { //qua lau, khong mang, cau lenh loi
+             //statusGet = false;
+         }
+         yield break;
+     }*/
+    private IEnumerator GetDataMultiplayer()
     {
-        WWWForm form = new WWWForm();
-        form.AddField("table", "useBusSubway");
-        form.AddField("limit", "30");
-        WWW _resuilt = new WWW(Modules.linkGetDataMultiplayer, form);
-        float runTime = 0f;
-        while (!_resuilt.isDone && runTime < Modules.maxTime)
+        Debug.Log("check db");
+        DatabaseReference reference = FirebaseDatabase.DefaultInstance.GetReference("users");
+
+        
+        Query query = reference.OrderByChild("score").LimitToFirst(30);
+
+        // Fetch the data from Firebase
+        DataSnapshot snapshot = null;
+       
+        var task = query.GetValueAsync().ContinueWith(t =>
         {
-            runTime += Modules.requestTime;
-            yield return new WaitForSeconds(Modules.requestTime);
-        }
-        yield return _resuilt;
-        if (_resuilt.text != "null" && _resuilt.text != "")
-        { //hoan thanh
-            //print(_resuilt.text);
-            listAvatarMultiPlayer = new List<Texture2D>();
-            string[] dataLine = _resuilt.text.Split('\n');
-            if (panelTopMultiplayer != null) Destroy(panelTopMultiplayer);
-            panelTopMultiplayer = Instantiate(listTempMultiplayer, Vector3.zero, Quaternion.identity) as GameObject;
-            Transform panelContent = panelTopMultiplayer.transform.Find("Content");
-            Transform panelItem = panelContent.transform.Find("Item");
-            for (int i = 0; i < dataLine.Length; i++)
+            if (t.Exception != null)
             {
-                if (dataLine[i] == "") continue;
-                GameObject newItem = panelItem.gameObject;
-                if (i > 0)
-                {
-                    newItem = Instantiate(panelItem.gameObject, Vector3.zero, Quaternion.identity) as GameObject;
-                    newItem.transform.SetParent(panelContent, false);
-                }
-                if (i % 2 != 0) newItem.GetComponent<Image>().color = Modules.colorListLine;
-                Transform tranAvatar = newItem.transform.Find("Avatar");
-                Transform tranName = newItem.transform.Find("Name");
-                Transform tranScore = newItem.transform.Find("Score");
-                Transform tranIndex = newItem.transform.Find("Index");
-
-                Image fbAvatar = tranAvatar.GetComponent<Image>();
-                Text fbName = tranName.GetComponent<Text>();
-                Text fbScore = tranScore.GetComponent<Text>();
-                Text fbIndex = tranIndex.GetComponent<Text>();
-
-                string[] data = dataLine[i].Split(';');
-                fbName.text = data[0];
-                listAvatarMultiPlayer.Add(null);
-                if (Modules.containAchievement.activeSelf) StartCoroutine(LoadImageMultiplayer(data[1], i, fbAvatar));
-                fbScore.text = data[2];
-                fbIndex.text = (i + 1).ToString();
+                Debug.LogWarning($"Failed to fetch data: {t.Exception}");
+                return;
             }
-            panelTopMultiplayer.transform.position = pointListMultiplayer;
-            panelTopMultiplayer.transform.SetParent(parentListMultiplayer.transform, false);
-            panelLoadingD.SetActive(false);
-            //statusGet = true;
+
+            snapshot = t.Result;
+        });
+        Debug.Log("Wait");
+        yield return new WaitUntil(() => task.IsCompleted);
+        Debug.Log("Waiting end ");
+        
+        if (snapshot == null || !snapshot.Exists)
+        {
+            Debug.Log("Nodata ");
+
+            // No data exists yet
+            yield break;
         }
-        else
-        { //qua lau, khong mang, cau lenh loi
-            //statusGet = false;
+
+        listAvatarMultiPlayer = new List<Texture2D>();
+
+        // Destroy any existing scoreboard elements
+        foreach (Transform child in parentListMultiplayer.transform)
+        {
+            Destroy(child.gameObject);
         }
-        yield break;
+
+        int index = 0;
+        if (panelTopMultiplayer != null) Destroy(panelTopMultiplayer);
+        panelTopMultiplayer = Instantiate(listTempMultiplayer, Vector3.zero, Quaternion.identity) as GameObject;
+        Transform panelContent = panelTopMultiplayer.transform.Find("Content");
+        Transform panelItem = panelContent.transform.Find("Item");
+        foreach (var childSnapshot in snapshot.Children)
+        {
+            var username = childSnapshot.Child("username").GetValue(true).ToString();
+            var score = int.Parse(childSnapshot.Child("score").GetValue(true).ToString());
+            GameObject newItem = panelItem.gameObject;
+
+            // Instantiate new scoreboard elements
+            Debug.Log(panelItem+"_"+ Vector3.zero+"_"+ Quaternion.identity);
+            newItem = Instantiate(panelItem.gameObject, Vector3.zero, Quaternion.identity) as GameObject;
+            newItem.transform.SetParent(panelContent, false);
+            newItem.SetActive(true);
+
+            if (index % 2 != 0)
+            {
+                newItem.GetComponent<Image>().color = Modules.colorListLine;
+            }
+
+            var tranAvatar = newItem.transform.Find("Avatar");
+            var tranName = newItem.transform.Find("Name");
+            var tranScore = newItem.transform.Find("Score");
+            var tranIndex = newItem.transform.Find("Index");
+
+            var fbAvatar = tranAvatar.GetComponent<Image>();
+            var fbName = tranName.GetComponent<Text>();
+            var fbScore = tranScore.GetComponent<Text>();
+            var fbIndex = tranIndex.GetComponent<Text>();
+
+            fbName.text = username;
+            fbScore.text = score.ToString();
+            fbIndex.text = (index + 1).ToString();
+
+            index++;
+        }
+
+        panelTopMultiplayer.transform.position = pointListMultiplayer;
+        panelTopMultiplayer.transform.SetParent(parentListMultiplayer.transform, false);
+        panelLoadingD.SetActive(false);
     }
 
-    /*
     public void ButtonLoginFacebook()
     {
 #if !(UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_IOS || UNITY_ANDROID || UNITY_EDITOR)
         return;
 #endif
         Modules.PlayAudioClipFree(Modules.audioButton);
-        fbController.FBlogin();
+        //fbController.FBlogin();
     }
-    */
+    
     public void ButtonTopFacebookClick()
     {
         Modules.PlayAudioClipFree(Modules.audioButton);
@@ -563,6 +654,7 @@ public class PageAchievement : MonoBehaviour
         parentListFriend.SetActive(false);
         parentListCountry.SetActive(false);
         parentListMultiplayer.SetActive(true);
+        StartCoroutine(GetDataMultiplayer());
     }
 
     public void ButtonPlayClick()
@@ -609,6 +701,8 @@ public class PageAchievement : MonoBehaviour
     public Text textTopWorldA, textTopWorldB, textTopWorldC;
     public Text textTopMultiplayerA, textTopMultiplayerB, textTopMultiplayerC;
     public Text textLoginFB, textNoteBonus, textLoadingA, textLoadingB, textLoadingC, textLoadingD;
+    private GameObject panelItem;
+
     public void ChangeAllLanguage()
     {
         int iLang = Modules.indexLanguage;

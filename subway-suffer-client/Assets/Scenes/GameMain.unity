@@ -2466,8 +2466,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1730926510}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1730926516}
+        m_TargetAssemblyTypeName: MessageFindOpponent, Assembly-CSharp
         m_MethodName: ButtonCloseBox
         m_Mode: 1
         m_Arguments:
@@ -12238,7 +12238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -165}
+  m_AnchoredPosition: {x: 0, y: -165.00002}
   m_SizeDelta: {x: 0, y: -330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &483492204
@@ -14007,7 +14007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -165}
+  m_AnchoredPosition: {x: 0, y: -165.00002}
   m_SizeDelta: {x: 0, y: -330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &564195284
@@ -35393,7 +35393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -165}
+  m_AnchoredPosition: {x: 0, y: -165.00002}
   m_SizeDelta: {x: 0, y: -330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1284369740
@@ -44675,6 +44675,7 @@ GameObject:
   - component: {fileID: 1730926512}
   - component: {fileID: 1730926511}
   - component: {fileID: 1730926510}
+  - component: {fileID: 1730926516}
   m_Layer: 5
   m_Name: AutoFindOpponentsBox
   m_TagString: Untagged
@@ -44797,6 +44798,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1730926516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730926508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ad11afa3d2ef44dbd9b88d9a7fc6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAvatar: {fileID: 0}
+  enemyAvatar: {fileID: 0}
+  iconLoading: {fileID: 0}
+  numLoading: {fileID: 0}
+  isClose: 0
 --- !u!1 &1744878037
 GameObject:
   m_ObjectHideFlags: 0
@@ -45026,6 +45044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe710a4f30fb0d4187e63e483af52d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberText: {fileID: 0}
   dependencyStatus: 0
   emailLoginField: {fileID: 1363972672}
   passwordLoginField: {fileID: 1363972672}
@@ -45036,6 +45055,10 @@ MonoBehaviour:
   passwordRegisterField: {fileID: 1363972672}
   passwordRegisterVerifyField: {fileID: 1363972672}
   warningRegisterText: {fileID: 1037725721}
+  usernameField: {fileID: 0}
+  scoreField: {fileID: 0}
+  scoreElement: {fileID: 0}
+  scoreboardContent: {fileID: 0}
 --- !u!4 &1756786601
 Transform:
   m_ObjectHideFlags: 0
@@ -45235,7 +45258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -165}
+  m_AnchoredPosition: {x: 0, y: -165.00002}
   m_SizeDelta: {x: 0, y: -330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763992718
