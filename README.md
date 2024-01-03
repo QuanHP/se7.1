@@ -80,7 +80,7 @@ __Tìm ra và sửa các lỗi game__
 - Lỗi đi xuyên qua thanh chắn đường hầm => Sửa bằng cách thêm các collision box tương ứng
 - Lỗi đi xuyên vào xe bus khi nhanh tay lướt ngang ở đầu xe => Sửa bằng cách sửa lỗi logic trong script
 - Chức năng tất bật xe bay hoạt động chưa đúng khiến người chơi bay xuyên qua các nắp hầm => Thêm các khối tunnelStart để quy định thêm về việc tắt xe bay
-- Lỗi không tắt được trạng thái tìm đối thủ =>
+- Lỗi không tắt được trạng thái tìm đối thủ => Bổ sung code cho class DeactiveMessageBox
 ## 2.3. Thay đổi 3
 __Ẩn một số chức năng lỗi hoặc chưa hoàn thiện__
 - Ẩn các vật phẩm mua bằng tiền mặt trong cửa hàng
