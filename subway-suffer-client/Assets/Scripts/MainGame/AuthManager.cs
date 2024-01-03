@@ -2,16 +2,21 @@ using System.Collections;
 using UnityEngine;
 using Firebase;
 using Firebase.Auth;
+using Firebase.Database;
 using TMPro;
+using System.Linq;
 using System.Threading.Tasks;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class AuthManager : MonoBehaviour
 {
+    public TextMeshProUGUI numberText;
     //Firebase variables
     [Header("Firebase")]
     public DependencyStatus dependencyStatus;
-    public FirebaseAuth auth;    
+    public FirebaseAuth auth;
     public FirebaseUser User;
+    public DatabaseReference DBreference;
 
     //Login variables
     [Header("Login")]
@@ -27,7 +32,13 @@ public class AuthManager : MonoBehaviour
     public TMP_InputField passwordRegisterField;
     public TMP_InputField passwordRegisterVerifyField;
     public TMP_Text warningRegisterText;
+    //UserData variables
+    public TMP_InputField usernameField;
+    public TMP_InputField scoreField;
 
+    public GameObject scoreElement;
+    public Transform scoreboardContent;
+    
     void Awake()
     {
         //Check that all of the necessary dependencies for Firebase are present on the system
@@ -58,7 +69,7 @@ public class AuthManager : MonoBehaviour
     {
         //Call the login coroutine passing the email and password
         Login(emailLoginField.text, passwordLoginField.text);
-        Debug.Log("Trying Login into: "+emailLoginField.text+"pass: "+passwordLoginField.text);
+        Debug.Log("Trying Login into: " + emailLoginField.text + "pass: " + passwordLoginField.text);
     }
     //Function for the register button
     public void RegisterButton()
@@ -114,24 +125,33 @@ public class AuthManager : MonoBehaviour
     //     }
     // }
 
-     private void Login(string _email, string _password)
+    private void Login(string _email, string _password)
     {
         auth.SignInWithEmailAndPasswordAsync(_email, _password).ContinueWith(task => {
-  if (task.IsCanceled) {
-    Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
-    return;
-  }
-  if (task.IsFaulted) {
-    Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-    return;
-  }
+            if (task.IsCanceled)
+            {
+                Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                return;
+            }
 
-  Firebase.Auth.AuthResult result = task.Result;
-  Debug.LogFormat("User signed in successfully: {0} ({1})",
-      result.User.DisplayName, result.User.UserId);
-});
+            Firebase.Auth.AuthResult result = task.Result;
+            Debug.LogFormat("User signed in successfully: {0} ({1})",
+                result.User.DisplayName, result.User.UserId);
+        });
+        SaveData(_email);
     }
+    public void SaveData(string _email)
+    {
+        StartCoroutine(UpdateUsernameAuth(_email));
+        StartCoroutine(UpdateUsernameDatabase(_email));
 
+        StartCoroutine(UpdateScore((int)Modules.totalScore));
+    }
     private IEnumerator Register(string _email, string _password, string _username)
     {
         if (_username == "")
@@ -139,12 +159,12 @@ public class AuthManager : MonoBehaviour
             //If the username field is blank show a warning
             warningRegisterText.text = "Missing Username";
         }
-        else if(passwordRegisterField.text != passwordRegisterVerifyField.text)
+        else if (passwordRegisterField.text != passwordRegisterVerifyField.text)
         {
             //If the password does not match show a warning
             warningRegisterText.text = "Password Does Not Match!";
         }
-        else 
+        else
         {
             //Call the Firebase auth signin function passing the email and password
             Task<AuthResult> RegisterTask = auth.CreateUserWithEmailAndPasswordAsync(_email, _password);
@@ -185,7 +205,7 @@ public class AuthManager : MonoBehaviour
                 if (User != null)
                 {
                     //Create a user profile and set the username
-                    UserProfile profile = new UserProfile{DisplayName = _username};
+                    Firebase.Auth.UserProfile profile = new Firebase.Auth.UserProfile { DisplayName = _username };
 
                     //Call the Firebase auth update user profile function passing the profile with the username
                     Task ProfileTask = User.UpdateUserProfileAsync(profile);
@@ -210,4 +230,130 @@ public class AuthManager : MonoBehaviour
             }
         }
     }
+    
+    private IEnumerator UpdateScore(int _score)
+    {
+        //Set the currently logged in user score
+
+        Task DBTask = DBreference.Child("users").Child(User.UserId).Child("score").SetValueAsync(_score);
+        Debug.Log("Chcekc db");
+
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else
+        {
+            //Score is now updated
+        }
+    }
+    private IEnumerator UpdateUsernameAuth(string _username)
+    {
+        //Create a user profile and set the username
+        Firebase.Auth.UserProfile profile = new Firebase.Auth.UserProfile { DisplayName = _username };
+
+        //Call the Firebase auth update user profile function passing the profile with the username
+        Task ProfileTask = User.UpdateUserProfileAsync(profile);
+        //Wait until the task completes
+        yield return new WaitUntil(predicate: () => ProfileTask.IsCompleted);
+
+        if (ProfileTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {ProfileTask.Exception}");
+        }
+        else
+        {
+            //Auth username is now updated
+        }
+    }
+
+    private IEnumerator UpdateUsernameDatabase(string _username)
+    {
+        //Set the currently logged in user username in the database
+        Task DBTask = DBreference.Child("users").Child(User.UserId).Child("username").SetValueAsync(_username);
+
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else
+        {
+            //Database username is now updated
+        }
+    }
+    
+    //Function for the scoreboard button
+    /*
+    public void ScoreboardButton()
+    {
+        StartCoroutine(LoadScoreboardData());
+    }
+    private IEnumerator LoadUserData()
+    {
+        //Get the currently logged in user data
+        Task<DataSnapshot> DBTask = DBreference.Child("users").Child(User.UserId).GetValueAsync();
+
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else if (DBTask.Result.Value == null)
+        {
+            //No data exists yet
+            scoreField.text = "0";
+
+        }
+        else
+        {
+            //Data has been retrieved
+            DataSnapshot snapshot = DBTask.Result;
+
+            scoreField.text = snapshot.Child("score").Value.ToString();
+
+        }
+    }
+
+    private IEnumerator LoadScoreboardData()
+    {
+        //Get all the users data ordered by kills amount
+        Task<DataSnapshot> DBTask = DBreference.Child("users").OrderByChild("score").GetValueAsync();
+
+        yield return new WaitUntil(predicate: () => DBTask.IsCompleted);
+
+        if (DBTask.Exception != null)
+        {
+            Debug.LogWarning(message: $"Failed to register task with {DBTask.Exception}");
+        }
+        else
+        {
+            //Data has been retrieved
+            DataSnapshot snapshot = DBTask.Result;
+
+            //Destroy any existing scoreboard elements
+            foreach (Transform child in scoreboardContent.transform)
+            {
+                Destroy(child.gameObject);
+            }
+
+            //Loop through every users UID
+            foreach (DataSnapshot childSnapshot in snapshot.Children.Reverse<DataSnapshot>())
+            {
+                string username = childSnapshot.Child("username").Value.ToString();
+                int score = int.Parse(childSnapshot.Child("score").Value.ToString());
+
+                //Instantiate new scoreboard elements
+                GameObject scoreboardElement = Instantiate(scoreElement, scoreboardContent);
+                //scoreboardElement.GetComponent<ScoreElement>().NewScoreElement(username, score);
+            }
+
+            //Go to scoareboard screen
+        }
+    }*/
+
 }
