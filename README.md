@@ -45,7 +45,8 @@ Game có hai chế độ:
 #### - Mua vật phẩm  
 - Mua các vật phẩm như ván bay, rương bí ẩn, xe bay, điểm cộng  
 #### - Nâng cấp  
-- Nâng cấp các vật phẩm để tăng thời gian duy trì: thiết bị bay, giày nhảy cao, nam châm, nhân đôi điểm, xe máy bay, ván bay  
+- Nâng cấp các vật phẩm để tăng thời gian duy trì: thiết bị bay, giày nhảy cao, nam châm, nhân đôi điểm, xe máy bay, ván bay
+![image](https://github.com/QuanHP/se7.1/assets/148623697/3a127af8-6dfa-4a44-84d2-20c616fb2bee)  
 ### 1.2.3 Màn chọn nhân vật  
 #### - Nhân vật  
 - Hiển thị danh sách các nhân vật của trò chơi  
@@ -54,12 +55,14 @@ Game có hai chế độ:
 #### - Ván bay  
 - Hiển thị danh sách các ván bay  
 - Hiển thị các thông tin cơ bản của ván bay  
-- Cho phép người chơi dùng vàng để mua ván bay và tùy ý chọn, đổi ván bay  
+- Cho phép người chơi dùng vàng để mua ván bay và tùy ý chọn, đổi ván bay
+![image](https://github.com/QuanHP/se7.1/assets/148623697/0663821d-fe92-48b6-89d2-c1231d783cc0)  
 ### 1.2.4 Màn hình bảng xếp hạng:  
 - Hiển thị điểm của người chơi  
 - Hiển thị mục các bạn bè của người chơi, xếp hạng các bạn bè theo thứ tự giảm dần về điểm chạy  
 - Hiển thị các quốc gia của bạn bè  
 - Hiển thị những bạn bè đang trực tuyến  
+![image](https://github.com/QuanHP/se7.1/assets/148623697/a77063fb-e6d4-4a4b-92b4-0914dda2b2a7)  
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
 ## 2.1. Thay đổi 1
