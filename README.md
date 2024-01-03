@@ -89,6 +89,8 @@ __Ẩn một số chức năng lỗi hoặc chưa hoàn thiện__
 __Thêm login bằng usename và password__
 - Thêm tính năng login bằng tài khoản và mật khẩu kết nối với firebase
 - Thêm tính năng login bằng facebook nhưng chưa lấy được mã doanh nghiệp
+![image](https://github.com/QuanHP/se7.1/assets/148623697/c74ac6c9-17a6-4346-a892-3a10ed3099a3)
+
 ## 2.4. Thay đổi 5
 __Thêm nhân vật mới__
 - Đã thêm được model của nhân vật mới vào game và thêm được vào cửa hàng nhưng do phát sinh lỗi liên quan đến scale nhân vật nên tạm thời loại bỏ khỏi cửu hàng
