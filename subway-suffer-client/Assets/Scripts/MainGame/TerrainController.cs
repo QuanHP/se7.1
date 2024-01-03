@@ -11,7 +11,7 @@ public class TerrainController : MonoBehaviour
     public List<int> listIndexScenesBonus = new List<int>();
     public int maxShowTerrainFront = 4;//ap dung chay xuoi map
     public int maxShowTerrainBack = 4;//ap dung chay lui map
-    private int originMaxShowFront = 4, originMaxShowBack =4;
+    private int originMaxShowFront = 4, originMaxShowBack = 4;
     private int runFront = 1;//neu -1 la run back
     [HideInInspector]
     public List<GameObject> listShowTerrain = new List<GameObject>();
@@ -145,8 +145,26 @@ public class TerrainController : MonoBehaviour
         if (indexScenesNow < 0)
         {
             int newMap = oldIndexScene;
-            while (newMap == oldIndexScene)
-                newMap = listIndexScenesNormal[Random.Range(0, listIndexScenesNormal.Count)];
+            string name = poolTerrains.listSceneTerrain[oldIndexScene].listTerrain[runCodeTerrain];
+            // while (newMap == oldIndexScene)
+            //     newMap = listIndexScenesNormal[Random.Range(0, listIndexScenesNormal.Count)];
+            if (name.StartsWith("A"))
+            {
+                newMap = listIndexScenesNormal[0];
+            }
+            else if (name.StartsWith("D"))
+            {
+                newMap = listIndexScenesNormal[0];
+            }
+            else if (name.StartsWith("B"))
+            {
+                newMap = listIndexScenesNormal[1];
+            }
+            else if (name.StartsWith("C"))
+            {
+                newMap = listIndexScenesNormal[2];
+            }
+            else newMap = listIndexScenesNormal[Random.Range(0, listIndexScenesNormal.Count)];
             indexScenesNow = newMap;
         }
         pointCodeTerrain = 0;
