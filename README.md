@@ -1,12 +1,12 @@
-# SUBWAY SUFFER 
-
-Tiêu đề vắn tắt dự án
-
+# SỬA LỖI VÀ NÂNG CẤP GAME SUBWAY SURFERS
 **Thành viên nhóm:**
-Liệt kê thành viên nhóm phát triển dự án
+- Phạm Hồng Quân
+- Vũ Bảo Thắng
+- Lê Thanh Thiên
+- Nguyễn Hữu Quang
 # 1. Mô tả game
-Mô tả cô đọng trong 5-10 dòng
-
+- Đây là game nhập vai thể loại subway surfers, nhân vật của người chơi được đặt vào tình thế bị truy đuổi và phải chạy liên tục
+- Trên đường chơi sẽ có các vật cả mà người chơi phải tránh, đồng thời có các vật phẩm mà người chơi có thể thu thập
 ## 1.1. Các kịch bản chơi game
 Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
 
@@ -98,5 +98,4 @@ Bấm nút Play của Unity để chạy thử
 ## 3.4. Build và chạy trên Android
 
 Vào menu File -> Build Settings, chọn Platform là Android rồi nhấn "Switch Platform" để chuyển sang Android. Sau đó nhấn vào nút Build để thực hiện build ra file APK. Tham khảo trên Google search để biết cách cài đặt Build settings sao cho phù hợp
->>>>>>> main
 
