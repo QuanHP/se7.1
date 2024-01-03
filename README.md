@@ -57,6 +57,23 @@ Chọn từng mặt của object muốn phủ, sau đó chọn texture tuyết v
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/9541d3d4-4e54-47e3-908c-b2b6df4cd1f9)
 
 ## 2.2. Thay đổi 2
+__Tìm ra và sửa các lỗi game__ 
+- Lỗi rơi ra khỏi map ở lối lên đường hầm => Sửa bằng cách thêm componet BarrierInformation cho các lối lên
+- Lỗi đi xuyên qua thanh chắn đường hầm => Sửa bằng cách thêm các collision box tương ứng
+- Lỗi đi xuyên vào xe bus khi nhanh tay lướt ngang ở đầu xe => Sửa bằng cách sửa lỗi logic trong script
+- Chức năng tất bật xe bay hoạt động chưa đúng khiến người chơi bay xuyên qua các nắp hầm => Thêm các khối tunnelStart để quy định thêm về việc tắt xe bay
+- Lỗi không tắt được trạng thái tìm đối thủ =>
+## 2.3. Thay đổi 3
+__Ẩn một số chức năng lỗi hoặc chưa hoàn thiện__
+- Ẩn các vật phẩm mua bằng tiền mặt trong cửa hàng
+- Ẩn chức năng record
+## 2.4. Thay đổi 4
+__Thêm login bằng usename và password__
+- Thêm tính năng login bằng tài khoản và mật khẩu kết nối với firebase
+- Thêm tính năng login bằng facebook nhưng chưa lấy được mã doanh nghiệp
+## 2.4. Thay đổi 5
+__Thêm nhân vật mới__
+- Đã thêm được model của nhân vật mới vào game và thêm được vào cửa hàng nhưng do phát sinh lỗi liên quan đến scale nhân vật nên tạm thời loại bỏ khỏi cửu hàng
 
 # 3. Hướng dẫn Khởi tạo dự án
 ## 3.1. Cài Unity bản từ 2022 trở đi
