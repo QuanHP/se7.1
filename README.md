@@ -20,7 +20,10 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/74eae87c-7c45-4082-a00f-5916a5c870fd)
 - Bóng bay: Đùng để chuyển giữa các map
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/6426e6ab-fa91-40e1-be18-036f26912748)
-
+- Giày nhảy cao: Giúp nhảy cao hơn bình thường để dễ dàng vượt địa hình
+![image](https://github.com/QuanHP/se7.1/assets/148623697/7e3ede39-6ae9-405c-8bc1-fde850d7f5b7)
+- Biểu tượng Pharaon: Khi chạm vào biểu tượng này, người chơi sẽ được chuyển đến map trên trời
+![image](https://github.com/QuanHP/se7.1/assets/148623697/3aba62a3-6134-4bd8-9e20-374b86458c7a)
 
 
 
