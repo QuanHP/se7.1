@@ -16,9 +16,9 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/9b503683-f93f-4baa-b133-eea57d0899c7)
 - Nam châm: Dùng để hút vàng xung quanh người chơi  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/0328a08a-57b3-4d1e-9b2b-5268a2fadb08)
-- Ván bay: Ấn 2 lần vào màn hình để triệu hồi ván bay. Ván bay giúp người chơi di chuyển nhanh hơn, nếu người chơi va chạm với vật thể trên đường thì ván bay tự phát nổ và người chơi sẽ được cứu.
+- Ván bay: Ấn 2 lần vào màn hình để triệu hồi ván bay. Ván bay giúp người chơi di chuyển nhanh hơn, nếu người chơi va chạm với vật thể trên đường thì ván bay tự phát nổ và người chơi sẽ được cứu.  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/a31d0006-b2c2-46b7-9a03-35e9b94e89fa)
-- Bóng bay: Đùng để chuyển giữa các map
+- Bóng bay: Đùng để chuyển giữa các map  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/011beda6-2aa4-4e22-be97-24a97bb1ca7e)
 - Giày nhảy cao: Giúp nhảy cao hơn bình thường để dễ dàng vượt địa hình
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/7e3ede39-6ae9-405c-8bc1-fde850d7f5b7)
