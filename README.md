@@ -8,7 +8,9 @@
 - Đây là game nhập vai thể loại subway surfers, nhân vật của người chơi được đặt vào tình thế bị truy đuổi và phải chạy liên tục
 - Trên đường chơi sẽ có các vật cả mà người chơi phải tránh, đồng thời có các vật phẩm mà người chơi có thể thu thập
 ## 1.1. Các kịch bản chơi game
-Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
+Game có hai chế độ:
+- Chế độ chơi cơ bản
+- Chế độ chơi "Con đường phần thưởng" truy cập thông qua item Pharaong. Đây là một đường hạn hữu hạn thay vì vô hạn như màn chơi gốc, cuối đường chạy sẽ là một rương phần thưởng nhưng để đến được đó người chơi phải vượt qua rất nhiều cạm bẫy
 
 ## 1.2. Các usecase trong game
 ### 1.2.1 Màn hình chính:
