@@ -76,9 +76,9 @@ Chọn từng mặt của object muốn phủ, sau đó chọn texture tuyết v
 ## 2.2. Thay đổi 2
 __Thay đổi cơ chế map__
 Cách làm:
-Bước 1: Dựa vào cơ chế chạm item bóng bay mà đi đến map khác mà thay đổi hàm SetNewScene ở file TerrainController. Từ đó thay đổi được việc chạm bóng bay ở terrain có mã là gì sẽ đi đến map nào tùy chỉnh.
-Bước 2: Thay đổi ở file LoadData.unity để điều chỉnh số lượng map cũng như số lượng và cách sắp xếp các terrain có trong map.
-Bước 3: Thay đổi ở file GameMain.unity để điều chỉnh map nào thuộc map thường hay map bonus.
+Bước 1: Dựa vào cơ chế chạm item bóng bay mà đi đến map khác mà thay đổi hàm SetNewScene ở file TerrainController. Từ đó thay đổi được việc chạm bóng bay ở terrain có mã là gì sẽ đi đến map nào tùy chỉnh
+Bước 2: Thay đổi ở file LoadData.unity để điều chỉnh số lượng map cũng như số lượng và cách sắp xếp các terrain có trong map
+Bước 3: Thay đổi ở file GameMain.unity để điều chỉnh map nào thuộc map thường hay map bonus
 ## 2.3. Thay đổi 3
 __Tìm ra và sửa các lỗi game__ 
 - Lỗi rơi ra khỏi map ở lối lên đường hầm => Sửa bằng cách thêm componet BarrierInformation cho các lối lên
