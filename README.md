@@ -41,11 +41,18 @@ Game có hai chế độ:
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/1e0f2522-b3f4-4aed-874b-6af4fc961b54)
 - Lò xo: Giúp bật nhảy lên cao  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/297c37ca-e01f-4b48-b88d-5c51eacd5053)  
-### 1.2.2 Màn hình cửa hàng:
-
-### 1.2.3 Màn hình chính:
-
-### 1.2.4 Màn hình bảng xếp hạng:
+### 1.2.2 Màn hình cửa hàng:  
+#### - Mua vật phẩm  
+- Mua các vật phẩm như ván bay, rương bí ẩn, xe bay, điểm cộng  
+#### - Nâng cấp  
+- Nâng cấp các vật phẩm để tăng thời gian duy trì: thiết bị bay, giày nhảy cao, nam châm, nhân đôi điểm, xe máy bay, ván bay  
+### 1.2.3 Màn chọn nhân vật
+- 
+### 1.2.4 Màn hình bảng xếp hạng:  
+- Hiển thị điểm của người chơi  
+- Hiển thị mục các bạn bè của người chơi, xếp hạng các bạn bè theo thứ tự giảm dần về điểm chạy  
+- Hiển thị các quốc gia của bạn bè  
+- Hiển thị những bạn bè đang trực tuyến  
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
 ## 2.1. Thay đổi 1
