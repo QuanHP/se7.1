@@ -12,7 +12,10 @@ Mô tả cô đọng trong 5-10 dòng
 Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
 
 ## 1.2. Các usecase trong game
-- Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay,...  
+- Lối chơi:
++ Di chuyển sang trái, phải, lên, xuống tránh các vật cản để đạt thành tích chạy cao nhất có thể.  
++ Bên cạnh đó, trên đường chạy người chơi có thể thu thập và tích lũy các vật phẩm để giúp quá trình chạy dễ dàng.  
+- Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay, nâng cấp đồ,..   
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/9b503683-f93f-4baa-b133-eea57d0899c7)
 - Chìa khóa: Giúp hồi sinh trong trận  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/67061ce9-3f73-4968-81be-4681cc943117)
@@ -46,6 +49,8 @@ Bước 1: Lấy các texture liên quan đến tuyết để phủ lên bề m�
 Bước 2: Chọn "Material" -> tạo một texture mới -> import ảnh tuyết đã tải về từ trước để làm texture phủ lên từng object. Sau đó, chuyển từ "Object Mode" sang "Edit Mode"  
 Bước 3: Ở Edit Mode, có 3 lựa chọn là Vertex select, Edge select và Face select. Chọn Face select và tiến hành phủ tuyết bằng texture  
 Chọn từng mặt của object muốn phủ, sau đó chọn texture tuyết vừa import vào -> chọn "Assign" để phủ texture lên từng object  
+![image](https://github.com/QuanHP/se7.1/assets/148623697/9541d3d4-4e54-47e3-908c-b2b6df4cd1f9)
+
 ## 2.2. Thay đổi 2
 
 # 3. Hướng dẫn Khởi tạo dự án
