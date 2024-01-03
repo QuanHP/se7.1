@@ -12,8 +12,9 @@ Mô tả cô đọng trong 5-10 dòng
 Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war...
 
 ## 1.2. Các usecase trong game
-### - Lối chơi:
-+ Di chuyển sang trái, phải, lên, xuống tránh các vật cản để đạt thành tích chạy cao nhất có thể.  
+### 1.2.1 Màn hình chính:
++ Nhân vật luôn luôn di chuyển về phía trước trong màn chơi lặp lại vô hạn
++ Người chơi là di chuyển sang trái, phải, nhảy lên, lộn xuống tránh các vật cản để đạt thành tích chạy cao nhất có thể.  
 + Bên cạnh đó, trên đường chạy người chơi có thể thu thập và tích lũy các vật phẩm để giúp quá trình chạy dễ dàng.  
 - Vàng: người chơi ăn vàng để có thể mua nhân vật mới, mua ván trượt, mua xe bay, nâng cấp đồ,..   
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/9b503683-f93f-4baa-b133-eea57d0899c7)
@@ -39,7 +40,11 @@ Mô tả chi tiết các kịch bản chơi của game, vd Death war,  Civil war
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/1e0f2522-b3f4-4aed-874b-6af4fc961b54)
 - Lò xo: Giúp bật nhảy lên cao  
 ![image](https://github.com/QuanHP/se7.1/assets/148623697/297c37ca-e01f-4b48-b88d-5c51eacd5053)  
+### 1.2.2 Màn hình cửa hàng:
 
+### 1.2.3 Màn hình chính:
+
+### 1.2.4 Màn hình bảng xếp hạng:
 # 2. Các sửa đổi cho game
 Mô tả chi tiết các sửa đổi trong game, bao gồm hình ảnh, thuyết minh, thuật toán hoặc các Class hay method thêm/sửa/xóa
 ## 2.1. Thay đổi 1
