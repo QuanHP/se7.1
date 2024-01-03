@@ -59,6 +59,7 @@ Cách cấu hình để đăng nhập bằng firebase:
 -	Vào project settings và tải xuống google-service.json và firebase SDK về và cài  các package cần thiết như (FirebaseAuth,FirebaseDatabase,,..).
 -	đặt file google-service.json vào assets. 
 -	Giải nén file firebase SDK. Sau đó vào Assets và chọn import package > Custom package > .unitypackage file
+  
 Cách cấu hình để đăng nhập bằng facebook:
 -	Truy cập vào trang https://developers.facebook.com/docs/unity/ vài tải xuống facebook sdk.
 -	Truy cập vào https://developers.facebook.com/ và tạo app.
